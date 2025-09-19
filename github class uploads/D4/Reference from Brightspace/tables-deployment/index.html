@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Table and DOM semantic tags</title>
+        <meta name="author" content="Don Welch">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- The <header> element represents introductory content, typically a group of introductory 
+            or navigational aids. It may contain some heading elements but also a logo, a search form, 
+            an author name, and other elements. -->
+       <header>
+            <img src="img/muddy-boots.png" alt="muddy boots"
+                title="hello from Muddy Boots Landscaping">
+            <h1>Muddy Boots Landscaping</h1>
+            <!-- tagline/byline-->
+             <p><i>.... transforming your outdoor oasis!!!</i></p>
+            <!-- hero image-->
+             <img src="img/garden.png" alt="landscape image of backyard garden"
+                width="700" height="250">
+
+       </header>
+       <!-- The <main> element represents the dominant content of the <body> of a document.
+       The main content area consists of content that is directly related to or expands upon
+       the central topic of a document. -->
+       <main>
+            <h2>About Our Services</h2>
+            <p>Uncompromised outdoor living—that's what we want for every client that we work with. 
+                This is why we create spaces that do more than just add aesthetic value to your property. 
+                It should be tailored to your needs, values, and lifestyle.</p>
+            <p>Whether this means having an alternative space to work in or a place where you can relax 
+                and entertain, we can accomplish this with our design and build services.</p>
+            <p>Our skilled designers leverage proven design principles for each project so it looks 
+                amazing—and is customized to fit your preferred style and taste! Once you’re ready, 
+                we can then move forward to build it for you, in phases or all at once.</p>
+            <h2>Service Plans & Pricing</h2>
+            <!-- note: the border attribute is deprecated (not recommended) and will cause an error in the validator,
+                    however, we are using it here until we start CSS for styling. -->
+            <table border="1">
+                <!-- the caption is a title to your table-->
+                 <caption>Our Best Value Packages</caption>
+                 <thead>
+                    <!-- this area is for the column headers
+                         usually only on row tr
+                         the cells for your header are th-->
+                    <tr>
+                        <th>Package</th>
+                        <th>Features</th>
+                        <th>Price</th>
+                    </tr>
+                 </thead>
+                 <tbody>
+                    <!-- this area is for the column data
+                         there can be any number of rows
+                         there is typically a data for each column
+                             however this can be altered usually colspan
+                         Cells with a single column can also be merged using the rowspan
+                         the cells for your data row are td-->
+                    <tr>
+                        <td>Basic Clean-up</td>
+                        <td>Leaf removal, basic pruning</td>
+                        <td>$99</td>
+                    </tr>
+                    <tr>
+                        <td>Design &amp; Planting</td>
+                        <td>Garden layout, new plant installation</td>
+                        <td>$299</td>
+                    </tr>
+                    <tr>
+                        <td>Full Transformation</td>
+                        <td>Custom hardscaping &amp; planting</td>
+                        <td>$799</td>
+                    </tr>
+                 </tbody>
+                 <tfoot>
+                    <!-- the footer is optional in a table
+                        generally used for summary table information such as totals-->
+                 </tfoot>
+            </table>
+       </main>
+       <footer>
+             <!-- A <footer> typically contains information about the author of the section,
+                    copyright data or links to related documents. -->
+            <h2>Get In Touch</h2>
+            <address>
+                <!-- the br tag forces the browser to place the following text on the next
+                     physical line of the web page-->
+                210 Glendale Ave<br>
+                St. Catharines, Ontario<br>
+                R3T 1R2
+            </address>
+            <p>&copy; 2025 Muddy Boots Landscaping, all rights protected</p>
+       </footer>
+    </body>
+</html>
